@@ -27,7 +27,7 @@ function anagCheck(a, b) {
         var sortB = abc(myB);
         if (sortA === sortB) {
             console.log("These strings are anagrams");
-        } else console.log("Dude these words fakes us out!");
+        } else console.log("These words almost tricked us!");
     }
 }
 
