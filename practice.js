@@ -32,7 +32,7 @@ function anagCheck(a, b) {
         } else console.log("These words almost tricked us!");
     }
 }
-
+// this function works with the anagCheck(). abc() sorts the string. 
 function abc(str) {
     var arr = str.split(''),
         sorted = arr.sort().join('').replace(/\s+/g, '');
@@ -43,7 +43,6 @@ function abc(str) {
 
 // Convert a string to morris code. 
 var message = "abc bca";
-
 var alphabet = {
     a: ".-",
     b: "-...",
@@ -73,15 +72,15 @@ var alphabet = {
     z: "--.."
 };
 
-
 function translate(strMessage) {
+    var strTest = strMessage.toLowerCase();
     var newMessage;
-    for (var i = 0; i <= message.length; i++) {
-        if (message[i] === " ") {
+    for (var i = 0; i <= strTest.length; i++) {
+        if (strTest[i] === " ") {
             newMessage += " ";
         } else {
             for (var key in alphabet) {
-                if (message[i] === key) {
+                if (strTest[i] === key) {
                     newMessage += alphabet[key];
                 }
             }
@@ -89,6 +88,5 @@ function translate(strMessage) {
     }
     console.log("Translated to morris code " + newMessage);
 }
-
 // function call uncomment to run this function
 // translate(message);
