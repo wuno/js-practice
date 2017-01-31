@@ -90,3 +90,25 @@ function translate(strMessage) {
 }
 // function call uncomment to run this function
 // translate(message);
+
+// this takes a string from an object by key and splits it into an array using a closure and a callback function
+
+var data = {
+    a: 'You have an A'
+};
+
+function execData(data, callback) {
+
+    function split(data, callback) {
+        for(key in data) {
+            if (key === 'a'){
+                var ns = data[key].split('');
+                callback(ns);
+            }
+        }
+    }
+    return ns.reverse().join('');
+}
+
+// function call uncomment to run this function
+// execData();

@@ -1,0 +1,23 @@
+{
+  "name": "practice",
+  "version": "1.0.0",
+  "description": "A place to practice javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wuno/js-practice.git"
+  },
+  "author": "Nicholas J. Diaz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wuno/js-practice/issues"
+  },
+  "homepage": "https://github.com/wuno/js-practice#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  }
+}
