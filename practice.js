@@ -102,13 +102,13 @@ function execData(data, callback) {
     function split(data, callback) {
         for(key in data) {
             if (key === 'a'){
-                var ns = data[key].split('');
+                var ns = data[key].split('').reverse();
                 callback(ns);
             }
         }
     }
-    return ns.reverse().join('');
+    return ns.join('');
 }
 
 // function call uncomment to run this function
-// execData();
+// execData(data);
