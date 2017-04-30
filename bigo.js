@@ -10,6 +10,28 @@ function log(array) {
  console.log(array[1]);
 }
 
+// O (log n) Logromithmic Runtime
+// Each operation that is performed cuts the input in half
+// Example would be a binary search function
+function binarySearch(array, key) {
+    var low = 0;
+    var high = array.length - 1;
+    var mid;
+    var element;
+
+    while (low <= high) {
+        mid = Math.floor((low + high) / 2, 10);
+        element = array[mid];
+        if (element < key) {
+            low = mid + 1;
+        } else if (element > key) {
+            high = mid - 1;
+        } else {
+            return mid;
+        }
+    }
+    return -1;
+}
 
 // O(N) Linear Runtime
 // Runtime is proportional to the input
@@ -45,29 +67,6 @@ function addAndLog(array) {
      console.log(array[i] + array[j]);
    }
  }
-}
-
-// O (log n) Logromithmic Runtime
-// Each operation that is performed cuts the input in half
-// Example would be a binary search function
-function binarySearch(array, key) {
-    var low = 0;
-    var high = array.length - 1;
-    var mid;
-    var element;
-
-    while (low <= high) {
-        mid = Math.floor((low + high) / 2, 10);
-        element = array[mid];
-        if (element < key) {
-            low = mid + 1;
-        } else if (element > key) {
-            high = mid - 1;
-        } else {
-            return mid;
-        }
-    }
-    return -1;
 }
 
 // O(2^N) A function that will double and grow exponentially
