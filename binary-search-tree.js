@@ -3,6 +3,7 @@
 // top number is parent Node
 // lesser node child is left
 // larger node chil is right
+// O(log n)
 
 function BST(value) {
   this.value = value;
